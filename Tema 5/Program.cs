@@ -7,7 +7,7 @@ class Program
         //1.Scrieti un program care va afisa pozitia unui substring intr-un string, ambele siruri de caractere fiind citite de la tastatura
 
         //Console.WriteLine("Introduceti textul:");
-        //string sir = onsole.ReadLine();
+        //string sir = console.ReadLine();
 
         //Console.WriteLine("Introduceti subsirul:");
         //string substring = Console.ReadLine();
