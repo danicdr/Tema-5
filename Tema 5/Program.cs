@@ -36,25 +36,46 @@ class Program
         //Console.WriteLine("E palindrom");
 
 
+        
 
-        //4.Scrieti un program care va numara toate aparitiile unui caracter intr-un sir de caractere.Atat caracterul cautat cat si sirul de caractere vor fi citite de la tastatura
+      5.using System;
 
-        //Console.Write("Introduceti sirul de caractere: ");
-        //string text = Console.ReadLine();
+class Program
+{
+    // Ex 4
+    // Scrieti un program care va afisa caracterul cu numarul cel mai mare de aparitii dintr-un string citit
+    // de la tastatura, ignorand caseing-ul literelor.
+    // Exemplu:
+    // Input: Elena are mere
+    // Output: e apare de 5 ori
+    static void Main()
+    {
+        Console.WriteLine("Introduceti un sir de caractere:");
+        var text = Console.ReadLine();
+        Console.WriteLine(CountLetter(text.ToLower()));
+    }
 
-        //Console.WriteLine("Introduceti caracterul dorit:");
-        //char caracterdorit = Console.ReadKey().KeyChar;
+    static string CountLetter(string text)
+    {
+        int[] LettersArr = new int[255];
 
+        int max = 0;
+        char countletter = ' ';
 
-        //int count = 0;
-        //foreach (char c in text)
-        //{
-        //if (c == caracterdorit)
-        //{
-        //count++;
-        //}
-        //}
-        //Console.WriteLine($"Caracterul '{caracterdorit}' apare de {count} ori");
+        for (int i = 0; i < text.Length; i++)
+        {
+            LettersArr[text[i]]++;
+            if (max < LettersArr[text[i]])
+            {
+                max = LettersArr[text[i]];
+                countletter = text[i];
+            }
+        }
+
+        return $@"Litera {(char)countletter} apare de {max} ori";
+    }
+}
+
 
 
 
